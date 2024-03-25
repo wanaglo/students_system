@@ -35,7 +35,7 @@ class GradePgRepository implements GradeRepositoryInterface {
     }
 
     public async deleteGrade(id: number): Promise<void> {
-        await pool.query('DELETE FROM grades WHRE id = $1', [id]);
+        await pool.query('DELETE FROM grades WHERE id = $1', [id]);
     }
 }
 
